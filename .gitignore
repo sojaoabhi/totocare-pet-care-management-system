@@ -1,0 +1,24 @@
+.DS_Store
+Thumbs.db
+
+# IDE settings
+.idea/
+.vscode/
+
+# Logs and temp files
+*.log
+logs/
+tmp/
+
+# Sensitive config
+config.php
+.env
+
+# Dependencies
+vendor/
+node_modules/
+
+# Cache and compiled files
+*.cache
+*.class
+*.pyc
