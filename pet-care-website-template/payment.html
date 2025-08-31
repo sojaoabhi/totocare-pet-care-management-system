@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Service Payment</title>
+    <link rel="stylesheet" href="payment.css">
+    <style>
+        body {
+  font-family: Arial, sans-serif;
+  background-color: #f3f4f6;
+}
+
+.payment-container {
+  width: 300px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+}
+
+label, select, input, button {
+  display: block;
+  width: 100%;
+  margin: 8px 0;
+  padding: 8px;
+  font-size: 16px;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+    </style>
+</head>
+<body>
+    <div class="payment-container">
+        <h2>Service Payment</h2>
+        <form id="paymentForm" action="process_payment.php" method="POST">
+            <label for="service">Service Type:</label>
+            <input type="text" id="service" name="service" readonly>
+
+            <label for="amount">Amount:</label>
+            <input type="text" id="amount" name="amount" readonly>
+
+            <button type="submit">Make Payment</button>
+        </form>
+    </div>
+
+    <script>
+        // Fetch service type and amount from session via PHP
+        fetch("fetch_booking.php")
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById("service").value = data.service_type;
+                document.getElementById("amount").value = data.amount;
+            })
+            .catch(error => {
+                alert("Error fetching booking details.");
+                console.error(error);
+            });
+    </script>
+</body>
+</html>

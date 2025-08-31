@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - TotoCare</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .sidebar {
+            width: 250px;
+            height: 100vh;
+            background-color: #333;
+            color: #fff;
+            position: fixed;
+            padding-top: 20px;
+        }
+
+        .sidebar h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #f39c12;
+        }
+
+        .sidebar a {
+            display: block;
+            color: #fff;
+            padding: 15px;
+            text-decoration: none;
+            margin: 5px 0;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+            background-color: #575757;
+        }
+
+        .sidebar a i {
+            margin-right: 10px;
+        }
+
+        .content {
+            margin-left: 250px;
+            padding: 20px;
+        }
+
+        .content h2 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        .logo {
+            text-align: center;
+            padding: 15px;
+            background-color: #222;
+            margin-bottom: 10px;
+        }
+
+        .logo img {
+            width: 80px;
+        }
+
+        .header {
+            padding: 20px;
+            background-color: #222;
+            color: #fff;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <h2>TotoCare Admin</h2>
+        </div>
+        <a href="#"><i class="fas fa-home"></i> Dashboard</a>
+        <a href="#"><i class="fas fa-users"></i> Manage Users</a>
+        <a href="#"><i class="fas fa-calendar-check"></i> Manage Bookings</a>
+        <a href="#"><i class="fas fa-paw"></i> Manage Adoptions</a>
+        <a href="#"><i class="fas fa-dollar-sign"></i> Manage Payments</a>
+        <a href="#"><i class="fas fa-chart-bar"></i> Statistics</a>
+        <a href="#"><i class="fas fa-cog"></i> Service Providers</a>
+        <a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a>
+    </div>
+    <div class="content">
+        <h2>Welcome to TotoCare Admin Dashboard</h2>
+        <p>Manage users, bookings, adoptions, payments, and service providers from a single platform.</p>
+    </div>
+</body>
+</html>
